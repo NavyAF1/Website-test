@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Kaushan+Script&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Kaushan+Script&family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#banner{
+    background: linear-gradient(rgb(0, 0, 0, 0.5),#7baf67),url(vata-pitta-kapha.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.logo{
+    width: 190px;
+    position: absolute;
+    top: 4%;
+    left: 10%;
+}
+.banner-text{
+    text-align: center;
+    color: white;
+    padding: 180px;
+}
+.banner-text h1{
+    font-size: 110px;
+    font-family: 'Kaushan Script', cursive;
+}
+.banner-text p{
+    font-size: 20px;
+    font-style: italic;
+    
+}
+.banner-btn{
+    margin: 70px auto 0;
+    font-family: 'Roboto', sans-serif;
+}
+.banner-btn a{
+    width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 0;
+    color: white;
+    border: .5px solid #fff;
+    position: relative;
+    z-index: 1;
+    transition: color 0.5s;
+}
+.banner-btn a span{
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: -1;
+    transition: 0.5s;
+}
+.banner-btn a:hover span{
+    width: 100%;
+}
+.banner-btn a:hover{
+    color: black;
+}
+#sideNav{
+    width: 250px;
+    height: 100vh;
+     position: fixed;
+     right: -250px;
+     top: 0;
+     background: #7baf67;
+     z-index: 2;
+     transition: 0.5s;   
+}
+nav ul li{
+    list-style: none;
+    margin: 50px 20px;        
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;   
+}
+#menuBtn{
+    width: 50px;
+    height: 50px;
+    background: #7baf67;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    border-radius: 3px;
+    z-index: 3;
+    cursor: pointer;   
+}
+#menuBtn img{
+    width: 20px;
+    margin-top: 15px;   
+}
+@media screen and (max-width: 770px) {
+    .banner-text h1{
+        font-size: 44px;
+        
+    }
+    .banner-btn a{
+        display: block;
+        margin: 20px auto;
+    }
+}
+</style>
+
+<body>
+    <section id="banner">
+    <img src="Logo.png.png" class="logo">
+     <div class="banner-text">
+         <h1>Wellness Centre</h1>
+         <p>Ancient Wisdom For Modern times</p>
+         <div class="banner-btn">
+             <a href="#"><span></span>Find Out</a>
+             <a href="#"><span></span>Read More</a>
+         </div>
+     </div>
+    </section>
+
+    <div id="sideNav">
+        <nav>
+         <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">FEATURES</a></li>
+            <li><a href="#">SERVICES</a></li>
+            <li><a href="#">TESTIMONIALS</a></li>
+            <li><a href="#">MEET US</a></li>
+         </ul>   
+        </nav>    
+</div>
+<div id="menuBtn">
+    <img src="menu.png" id="menu">
+</div>
+<script>
+var menuBtn = document.getElementById("menuBtn")
+var sideNav = document.getElementById("sideNav")
+var menu = document.getElementById("menu")
+
+sideNav.style.right = "-250px";
+
+menuBtn.onclick = function(){
+    if(sideNav.style.right == "-250px"){
+        sideNav.style.right = "0";
+        menu.src = "close.png";
+    }
+    else{
+        sideNav.style.right = "-250px";
+        menu.src = "menu.png";
+    }   
+}
+</script>
+
+</body>
+</html>
